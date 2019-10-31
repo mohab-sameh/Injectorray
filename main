@@ -1,0 +1,110 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+#include<stdlib.h>
+#include<Windows.h>
+#include<vector>
+#include<string>
+#include<stdio.h>
+using namespace std;
+void horse()
+{
+
+}
+
+
+int main()
+{
+	char x[200][200], y[200][200];
+	int r, c, dimr = 50, dimc = 80, hor = 25, hoc = 70;
+	// dimr = 9, dimc = 29
+
+	//insert dimr and dimc depending on the ascii art size
+	//inser hor and hoc depending on the asci character position
+
+	for (r = 0; r<dimr; r++)
+	{
+		for (c = 0; c < dimc; c++)
+		{
+			x[r][c] = ' ';
+			y[r][c] = ' ';
+		}
+	}
+
+
+
+
+	for (r = 0; r < dimr; r++)
+	{
+		gets_s(y[r]);
+	}
+	int f = 0;
+	for (r = 0; r < dimr; r++)
+	{
+		for (c = 0; c < dimc; c++)
+		{
+			if (y[r][c] == '\0')
+			{
+				for (; c < dimc; c++)
+				{
+					y[r][c] = ' ';
+				}
+			}
+		}
+	}
+
+	cout << endl << endl << endl << endl;
+
+	for (r = 0; r <= hor; r++)
+	{
+		for (c = hoc; c >= 0; c--)
+		{
+			if (y[r][c] != ' ')
+			{
+				if (y[r][c] != '\\' && y[r][c] != '\"' &&y[r][c] != '\'')
+				{
+					cout << "x[hor-" << hor - r << "][hoc-" << hoc - c << "] = " << "'" << y[r][c] << "'" << ";" << endl;
+				}
+				else
+				{
+					cout << "x[hor-" << hor - r << "][hoc-" << hoc - c << "] = " << "'" << "\\" << y[r][c] << "\'" << ";" << endl;
+				}
+			}
+		}
+
+	}
+	int ct = 1;
+	for (; r <dimr; r++)
+	{
+		for (c = hoc; c >= 0; c--)
+		{
+			if (y[r][c] != ' ')
+			{
+				if (y[r][c] != '\\' && y[r][c] != '\"' &&y[r][c] != '\'')
+				{
+					cout << "x[hor+" << ct << "][hoc-" << hoc - c << "] = " << "'" << y[r][c] << "'" << ";" << endl;
+				}
+				else
+				{
+					cout << "x[hor+" << ct << "][hoc-" << hoc - c << "] = " << "'" << "\\" << y[r][c] << "\'" << ";" << endl;
+				}
+			}
+		}
+		ct++;
+	}
+
+
+
+
+
+
+
+	for (int r = 0; r < dimr; r++)
+	{
+		for (int c = 0; c < dimc; c++)
+		{
+			cout << x[r][c];
+		}
+		cout << endl;
+	}
+}
