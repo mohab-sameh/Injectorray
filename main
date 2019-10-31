@@ -21,7 +21,8 @@ int main()
 
 	//insert dimr and dimc depending on the ascii art size
 	//inser hor and hoc depending on the asci character position
-
+	
+	Initializing utility arrays start here
 	for (r = 0; r<dimr; r++)
 	{
 		for (c = 0; c < dimc; c++)
@@ -30,10 +31,8 @@ int main()
 			y[r][c] = ' ';
 		}
 	}
-
-
-
-
+	
+	//Text input starts here
 	for (r = 0; r < dimr; r++)
 	{
 		gets_s(y[r]);
@@ -52,9 +51,9 @@ int main()
 			}
 		}
 	}
-
 	cout << endl << endl << endl << endl;
 
+	//Hardcode-able text output starts here
 	for (r = 0; r <= hor; r++)
 	{
 		for (c = hoc; c >= 0; c--)
@@ -92,13 +91,7 @@ int main()
 		}
 		ct++;
 	}
-
-
-
-
-
-
-
+	
 	for (int r = 0; r < dimr; r++)
 	{
 		for (int c = 0; c < dimc; c++)
