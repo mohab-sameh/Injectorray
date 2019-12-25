@@ -1,5 +1,5 @@
 # Injectorray
-Repository for Injectorray. The auto ASCII art into hardcode C++ code converter.
+Repository for Injectorray. The auto ASCII art into hardcoded C++ array code converter.
 
 This C++ code receives user text input (mainly optimized for ASCII art) and turns it into a plain text C++ code which can 
 later be copied and pasted into the compiler in order to inject the ASCII art directly into a 2d array, character by character.
