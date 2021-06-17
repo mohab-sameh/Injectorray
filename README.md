@@ -12,5 +12,3 @@ How to use:
 5) run program and paste the desired ASCII art you copied beforehand.
 6) wait for the output then highlight it and copy it.
 7) paste the previously copied output into the desired project and your ASCII art will be inserted into a 2D array.
-8) tell your university professor that you've manually entered a 300x300 flying dragon ASCII art and you demand an A+ in the course.
-Enjoy.
